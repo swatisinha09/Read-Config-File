@@ -18,7 +18,7 @@ export class Config {
     //Loads the config json file before the application bootstraps and load.
     load() {
         return new Promise((resolve) => {
-            this.http.get('../../../configuration/messages.xlf').map(res => res)
+            this.http.get('../../../configuration/env.json').map(res => res)
                 .subscribe(configData => {
                     this.config = configData;
                     resolve();
